@@ -3420,7 +3420,7 @@ namespace
 {
 class Twig_Environment
 {
-const VERSION ='1.16.3';
+const VERSION ='1.18.0';
 protected $charset;
 protected $loader;
 protected $debug;
@@ -3565,6 +3565,23 @@ if (!$this->runtimeInitialized) {
 $this->initRuntime();
 }
 return $this->loadedTemplates[$cls] = new $cls($this);
+}
+public function createTemplate($template)
+{
+$name = sprintf('__string_template__%s', hash('sha256', uniqid(mt_rand(), true), false));
+$loader = new Twig_Loader_Chain(array(
+new Twig_Loader_Array(array($name => $template)),
+$current = $this->getLoader(),
+));
+$this->setLoader($loader);
+try {
+$template = $this->loadTemplate($name);
+} catch (Exception $e) {
+$this->setLoader($current);
+throw $e;
+}
+$this->setLoader($current);
+return $template;
 }
 public function isTemplateFresh($name, $time)
 {
@@ -4898,6 +4915,9 @@ public function setDefaultStrategy($defaultStrategy)
 if (true === $defaultStrategy) {
 $defaultStrategy ='html';
 }
+if ('filename'=== $defaultStrategy) {
+$defaultStrategy = array('Twig_FileExtensionEscapingStrategy','guess');
+}
 $this->defaultStrategy = $defaultStrategy;
 }
 public function getDefaultStrategy($filename)
@@ -5235,10 +5255,6 @@ if ($object instanceof Twig_TemplateInterface) {
 return $ret ===''?'': new Twig_Markup($ret, $this->env->getCharset());
 }
 return $ret;
-}
-public static function clearCache()
-{
-self::$cache = array();
 }
 }
 }

@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'C:\xampp\htdocs\Raies_j\Portefeuille\Portefeuille\app/config/routing_dev.yml'
+    resource: /var/www/projet_jabrane/portefeuilleDeCompetence/Portefeuille/app/config/routing_dev.yml
