@@ -127,9 +127,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // portefeuille_portefeuille_default_index
-        if ($pathinfo === '/hello') {
-            return array (  '_controller' => 'portefeuille\\portefeuilleBundle\\Controller\\DefaultController::indexAction',  '_route' => 'portefeuille_portefeuille_default_index',);
+        // accueil
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'accueil');
+            }
+
+            return array (  '_controller' => 'portefeuille\\portefeuilleBundle\\Controller\\DefaultController::indexAction',  '_route' => 'accueil',);
         }
 
         if (0 === strpos($pathinfo, '/contact')) {
