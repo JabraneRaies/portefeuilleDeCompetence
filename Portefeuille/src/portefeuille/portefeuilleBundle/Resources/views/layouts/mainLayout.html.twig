@@ -29,17 +29,17 @@
       <!--header end-->
     
       {% include 'portefeuilleBundle:layouts:menu.html.twig' %}
-        <selection id="main-content">
-            <selection id="wrapper">
-                <selection id="panel">
+        <section id="main-content">
+            <section id="wrapper">
+                <section id="panel">
     {% block body %}
     {% endblock  %}
-                </selection>
-            </selection>
-        </selection>
-    
+                </section>
+            </section>
+        </section>
+    </section>
   </body>
-  </section>
+  
   <!-- js placed at the end of the document so the pages load faster -->
     <script src="{{ asset('bundles/portefeuille/js/jquery.js') }}" ></script>
     <script src="{{ asset('bundles/portefeuille/js/jquery-1.8.3.min.js') }}" ></script>

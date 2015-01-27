@@ -72,19 +72,19 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
         // line 31
         $this->env->loadTemplate("portefeuilleBundle:layouts:menu.html.twig")->display($context);
         // line 32
-        echo "        <selection id=\"main-content\">
-            <selection id=\"wrapper\">
-                <selection id=\"panel\">
+        echo "        <section id=\"main-content\">
+            <section id=\"wrapper\">
+                <section id=\"panel\">
     ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
         // line 37
-        echo "                </selection>
-            </selection>
-        </selection>
-    
+        echo "                </section>
+            </section>
+        </section>
+    </section>
   </body>
-  </section>
+  
   <!-- js placed at the end of the document so the pages load faster -->
     <script src=\"";
         // line 44
