@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-
-    <title>Raies Jabrane</title>
-      <link href="{{ asset('bundles/portefeuille/css/bootstrap-reset.css') }}" rel="stylesheet">
-      <link href="{{ asset('bundles/portefeuille/css/bootstrap.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('bundles/appadmin/css/font-awesome/font-awesome.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('bundles/portefeuille/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css') }}" rel="stylesheet">
-      <link href="{{ asset('bundles/portefeuille/css/owl.carousel.css') }}" rel="stylesheet"/>
-      <link href="{{ asset('bundles/portefeuille/css/style.css') }}" rel="stylesheet" />
-      <link href="{{ asset('bundles/portefeuille/css/style-responsive.css') }}" rel="stylesheet" />
-  </head>
-  <body>
-      <section id="container" class="">
-     <header class="header white-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
-            <!--logo start-->
-            <a href="index.html" class="logo">Flat<span>lab</span></a>
-            <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-
-            </div>
-            
-        </header>
+    <head>
+        <meta charset="utf-8">
+        <title>Raies Jabrane</title>
+            <link href="{{ asset('bundles/portefeuille/css/bootstrap-reset.css') }}" rel="stylesheet">
+            <link href="{{ asset('bundles/portefeuille/css/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('bundles/appadmin/css/font-awesome/font-awesome.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('bundles/portefeuille/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css') }}" rel="stylesheet">
+            <link href="{{ asset('bundles/portefeuille/css/owl.carousel.css') }}" rel="stylesheet">
+            <link href="{{ asset('bundles/portefeuille/css/style.css') }}" rel="stylesheet" >
+            <link href="{{ asset('bundles/portefeuille/css/style-responsive.css') }}" rel="stylesheet" >
+    </head>
+    <body>
+        <section id="container" class="">
+            <header class="header white-bg">
+                <div class="sidebar-toggle-box">                
+                    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation">                        
+                    </div>
+                </div>
+                <!--logo start-->
+                    <a href="{{ path('accueil') }}" class="logo">Flat<span>lab</span></a>
+                <!--logo end-->
+                <div class="nav notify-row" id="top_menu">
+                </div>
+            </header>
       <!--header end-->
-    
-      {% include 'portefeuilleBundle:layouts:menu.html.twig' %}
-        <section id="main-content">
-            <section id="wrapper">
-                <section id="panel">
+    {% include 'portefeuilleBundle:layouts:menu.html.twig' %}
+            <section id="main-content">
+                <section class="wrapper">
+                    <section class="panel">
+
     {% block body %}
     {% endblock  %}
                 </section>
             </section>
         </section>
-    </section>
-  </body>
+    </body>
   
   <!-- js placed at the end of the document so the pages load faster -->
     <script src="{{ asset('bundles/portefeuille/js/jquery.js') }}" ></script>

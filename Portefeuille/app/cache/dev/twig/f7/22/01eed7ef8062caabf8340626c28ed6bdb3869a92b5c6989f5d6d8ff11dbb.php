@@ -9,7 +9,7 @@ class __TwigTemplate_f72201eed7ef8062caabf8340626c28ed6bdb3869a92b5c6989f5d6d8ff
 
         // line 1
         try {
-            $this->parent = $this->env->loadTemplate("::base.html.twig");
+            $this->parent = $this->env->loadTemplate("portefeuilleBundle:layouts:mainLayout.html.twig");
         } catch (Twig_Error_Loader $e) {
             $e->setTemplateFile($this->getTemplateName());
             $e->setTemplateLine(1);
@@ -24,7 +24,7 @@ class __TwigTemplate_f72201eed7ef8062caabf8340626c28ed6bdb3869a92b5c6989f5d6d8ff
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "portefeuilleBundle:layouts:mainLayout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
