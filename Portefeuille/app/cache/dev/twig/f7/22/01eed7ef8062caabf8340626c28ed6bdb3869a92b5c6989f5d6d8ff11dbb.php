@@ -35,24 +35,55 @@ class __TwigTemplate_f72201eed7ef8062caabf8340626c28ed6bdb3869a92b5c6989f5d6d8ff
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        // line 4
-        echo "<h1>contact creation</h1>
-
-    ";
-        // line 6
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
+        // line 15
+        echo "<div class=\"col-lg-6\">
+    <section class=\"panel\">
+        <header class=\"panel-heading\">
+            Basic Forms
+        </header>
+        <div class=\"panel-body\">
+            <form role=\"form\">
+                <div class=\"form-group\">
+                    ";
+        // line 23
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nom", array()), 'row');
+        echo "        
+                </div>
+                <div class=\"form-group\">
+                    ";
+        // line 26
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "prenom", array()), 'row');
         echo "
+                </div>
+                <div class=\"form-group\">
+                    ";
+        // line 29
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numero", array()), 'row');
+        echo "
+                </div>
+                <div class=\"form-group\">
+                    ";
+        // line 32
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'row');
+        echo "
+                </div>
+                <div class=\"form-group\">
+                   ";
+        // line 35
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "message", array()), 'row');
+        echo "
+                </div>
+                
+               ";
+        // line 46
+        echo "                ";
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
+        echo "
+            </form>
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 10
-        echo $this->env->getExtension('routing')->getPath("contact");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-</ul>
+        </div>
+    </section>
+</div>
 ";
     }
 
@@ -68,6 +99,6 @@ class __TwigTemplate_f72201eed7ef8062caabf8340626c28ed6bdb3869a92b5c6989f5d6d8ff
 
     public function getDebugInfo()
     {
-        return array (  50 => 10,  43 => 6,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  79 => 46,  73 => 35,  67 => 32,  61 => 29,  55 => 26,  49 => 23,  39 => 15,  36 => 3,  11 => 1,);
     }
 }

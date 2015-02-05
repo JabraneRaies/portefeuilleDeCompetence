@@ -76,7 +76,7 @@ class contactController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Envoyer','attr'=> array('class'=>'btn btn-info')));
 
         return $form;
     }
