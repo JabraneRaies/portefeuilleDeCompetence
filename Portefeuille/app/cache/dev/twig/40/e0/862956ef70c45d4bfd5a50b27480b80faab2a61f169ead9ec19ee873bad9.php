@@ -65,7 +65,7 @@ class __TwigTemplate_40e0862956ef70c45d4bfd5a50b27480b80faab2a61f169ead9ec19ee87
             <li>
                 <a class=\"active\" href=\"";
         // line 45
-        echo $this->env->getExtension('routing')->getPath("contact");
+        echo $this->env->getExtension('routing')->getPath("contact_new");
         echo "\">
                     <i class=\"fa fa-dashboard\"></i>
                         <span>

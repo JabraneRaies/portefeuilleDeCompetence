@@ -15,10 +15,11 @@
 <div class="col-lg-6">
     <section class="panel">
         <header class="panel-heading">
-            Basic Forms
+           Contact
         </header>
         <div class="panel-body">
-            <form role="form">
+           {# <form role="form">#}
+            {{ form_start(form) }}
                 <div class="form-group">
                     {{ form_row(form.nom) }}        
                 </div>
@@ -43,8 +44,9 @@
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>#}
-                {{ form_rest(form) }}
-            </form>
+                {{ form_row(form.submit) }}
+                {{ form_end(form) }}
+            {#</form>#}
 
         </div>
     </section>
