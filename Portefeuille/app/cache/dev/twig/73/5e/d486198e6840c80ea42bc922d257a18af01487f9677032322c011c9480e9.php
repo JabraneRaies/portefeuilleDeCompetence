@@ -74,13 +74,13 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
         // line 29
         echo "            <section id=\"main-content\">
                 <section class=\"wrapper\">
-                    <section class=\"panel\">
+                    
 
     ";
         // line 33
         $this->displayBlock('body', $context, $blocks);
         // line 35
-        echo "                </section>
+        echo "                
             </section>
         </section>
     </body>

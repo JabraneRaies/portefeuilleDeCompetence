@@ -52,8 +52,8 @@ class contactController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
-
-            return $this->redirect($this->generateUrl('contact_show', array('id' => $entity->getId())));
+            $this->get('session')->setFlash('notice', 'Contact enregistrer');
+            return $this->redirect($this->generateUrl('accueil'));
         }
 
         return array(
@@ -76,7 +76,7 @@ class contactController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Envoyer'));
+        $form->add('submit', 'submit', array('label' => 'Envoyer','attr'=> array('class'=>'btn btn-info')));
 
         return $form;
     }
