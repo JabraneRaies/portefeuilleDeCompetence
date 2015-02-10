@@ -11,6 +11,7 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
 
         $this->blocks = array(
             'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -84,8 +85,26 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
             </section>
         </section>
     </body>
-  
-  <!-- js placed at the end of the document so the pages load faster -->
+  ";
+        // line 39
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 65
+        echo "</html>
+";
+    }
+
+    // line 33
+    public function block_body($context, array $blocks = array())
+    {
+        // line 34
+        echo "    ";
+    }
+
+    // line 39
+    public function block_javascripts($context, array $blocks = array())
+    {
+        // line 40
+        echo "  <!-- js placed at the end of the document so the pages load faster -->
     <script src=\"";
         // line 41
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/portefeuille/js/jquery.js"), "html", null, true);
@@ -150,15 +169,11 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
         // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/portefeuille/js/count.js"), "html", null, true);
         echo "\" ></script>
-</html>
-";
-    }
-
-    // line 33
-    public function block_body($context, array $blocks = array())
-    {
-        // line 34
-        echo "    ";
+    <script> 
+        \$('#portefeuille_portefeuillebundle_contact_submit').on( \"click\", function() {
+        alert('woow ta cliquer')});
+    </script>
+  ";
     }
 
     public function getTemplateName()
@@ -173,6 +188,6 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
 
     public function getDebugInfo()
     {
-        return array (  161 => 34,  158 => 33,  151 => 59,  147 => 58,  143 => 57,  137 => 54,  131 => 51,  127 => 50,  123 => 49,  119 => 48,  115 => 47,  111 => 46,  107 => 45,  103 => 44,  99 => 43,  95 => 42,  91 => 41,  83 => 35,  81 => 33,  75 => 29,  73 => 28,  64 => 22,  51 => 12,  47 => 11,  43 => 10,  39 => 9,  35 => 8,  31 => 7,  27 => 6,  20 => 1,);
+        return array (  170 => 59,  166 => 58,  162 => 57,  156 => 54,  150 => 51,  146 => 50,  142 => 49,  138 => 48,  134 => 47,  130 => 46,  126 => 45,  122 => 44,  118 => 43,  114 => 42,  110 => 41,  107 => 40,  104 => 39,  100 => 34,  97 => 33,  92 => 65,  90 => 39,  84 => 35,  82 => 33,  76 => 29,  74 => 28,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  36 => 8,  32 => 7,  28 => 6,  21 => 1,);
     }
 }

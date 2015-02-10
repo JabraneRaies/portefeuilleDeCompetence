@@ -51,11 +51,20 @@ class contactController extends Controller
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
-            $em->flush();
-            $this->get('session')->setFlash('notice', 'Contact enregistrer');
+            $em->flush();         
+            $this->get('session')->getFlashBag()->add(
+            'notice',
+            'Contact enregistré!'
+            );
+
             return $this->redirect($this->generateUrl('accueil'));
         }
 
+//        if(is_array($form)){
+//            return $this->render('PortefeuilleBundle:contact:new.html.twig',array(
+//            'message'=>'Ajout effectuer avec succes')); 
+//        }
+        
         return array(
             'entity' => $entity,
             'form'   => $form->createView(),

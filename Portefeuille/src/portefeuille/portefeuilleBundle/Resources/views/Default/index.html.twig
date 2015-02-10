@@ -1,1 +1,8 @@
 {% extends 'portefeuilleBundle:layouts:mainLayout.html.twig' %}
+{% block body -%}
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="alert alert-success fade in">
+        <center><h2>{{ flashMessage }}</h2></center>
+    </div>
+{% endfor %}
+{% endblock %}

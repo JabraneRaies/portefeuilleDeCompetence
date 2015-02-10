@@ -2,6 +2,7 @@
 
 namespace portefeuille\portefeuilleBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,7 +24,11 @@ class contact
 
     /**
      * @var string
-     *
+     * @Assert\Regex(
+     *     pattern="#^[a-zA-Z]+$#",
+     *     match=true,
+     *     message="Votre nom n'est pas bon"
+     * )
      * @ORM\Column(name="Nom", type="string", length=255)
      */
     private $nom;
@@ -37,7 +42,10 @@ class contact
 
     /**
      * @var string
-     *
+     * @Assert\Email(
+     *     message = "'{{ value }}' n'est pas un email valide.",
+     *     checkMX = true
+     * )
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
@@ -51,7 +59,11 @@ class contact
 
     /**
      * @var string
-     *
+     * @Assert\Regex(
+     *     pattern="#^0[1-9]([-. ]?[0-9]{2}){4}$#",
+     *     match=true,
+     *     message="Votre numero de téléphone n'est pas bon"
+     * )
      * @ORM\Column(name="numero", type="string", length=14)
      */
     private $numero;
