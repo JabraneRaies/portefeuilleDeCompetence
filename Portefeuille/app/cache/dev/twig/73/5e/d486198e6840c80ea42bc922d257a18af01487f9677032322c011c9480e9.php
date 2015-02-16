@@ -31,12 +31,9 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
         // line 7
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/portefeuille/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-            <link href=\"";
-        // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/appadmin/css/font-awesome/font-awesome.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">
-            <link href=\"";
+";
         // line 9
+        echo "            <link href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/portefeuille/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
             <link href=\"";
@@ -88,7 +85,7 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
   ";
         // line 39
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 65
+        // line 126
         echo "</html>
 ";
     }
@@ -169,10 +166,71 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
         // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/portefeuille/js/count.js"), "html", null, true);
         echo "\" ></script>
-    <script> 
-        \$('#portefeuille_portefeuillebundle_contact_submit').on( \"click\", function() {
-        alert('woow ta cliquer')});
-    </script>
+
+
+        <script>
+        /*
+         * RegEx E-mail
+         * controle de saisie
+         */
+        \$('#portefeuille_portefeuillebundle_contact_email').focusout(function() {
+        if(\$( this ).val().match('^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}\$')){
+            if(\$('#erreur_mail').length>0){\$('#erreur_mail').remove();
+                
+        }}
+        else{if(\$('#erreur_mail').length==0){
+                \$('#form_email').append(\"<div id='erreur_mail' class='alert alert-warning fade in' >Ce n'est pas une adresse e-mail valide</div>\");
+        }}
+        });
+        </script>
+        <script>
+        /*
+         * RegEx Numéro de téléphone
+         * controle de saisie
+         */
+        \$('#portefeuille_portefeuillebundle_contact_numero').focusout(function() {
+        if(\$( this ).val().match('^0[1-9]([-. ]?[0-9]{2}){4}\$')){
+            if(\$('#erreur_num').length>0){\$('#erreur_num').remove();
+                
+        }}
+        else{if(\$('#erreur_num').length==0){
+                \$('#form_num').append(\"<div id='erreur_num' class='alert alert-warning fade in'>Ce n'est pas un numéro de téléphone valide</div>\");
+        }}
+        });
+        </script>
+        <script>
+        /*
+         * Controle de saisie Prénom 
+         */
+        \$('#portefeuille_portefeuillebundle_contact_nom').focusout(function() {
+            if(\$('#erreur_nom').length>0){\$('#erreur_nom').remove();
+                
+        }
+        else{if(\$('#erreur_nom').length==0){
+                \$('#form_nom').append(\"<div id='erreur_nom' class='alert alert-warning fade in' >veuillez remplir ce champ</div>\");
+        }}
+        });
+        
+      
+        </script>
+        
+        <script>
+        /*
+         * Controle de saisie Prénom 
+         */
+        \$('#portefeuille_portefeuillebundle_contact_prenom').focusout(function() {
+            if(\$('#erreur_prenom').length>0){\$('#erreur_prenom').remove();
+                
+        }
+        else{if(\$('#erreur_prenom').length==0){
+                \$('#form_prenom').append(\"<div id='erreur_prenom' class='alert alert-warning fade in' >veuillez remplir ce champ</div>\");
+        }}
+        });
+        
+      
+        </script>
+
+    
   ";
     }
 
@@ -188,6 +246,6 @@ class __TwigTemplate_735ed486198e6840c80ea42bc922d257a18af01487f9677032322c011c9
 
     public function getDebugInfo()
     {
-        return array (  170 => 59,  166 => 58,  162 => 57,  156 => 54,  150 => 51,  146 => 50,  142 => 49,  138 => 48,  134 => 47,  130 => 46,  126 => 45,  122 => 44,  118 => 43,  114 => 42,  110 => 41,  107 => 40,  104 => 39,  100 => 34,  97 => 33,  92 => 65,  90 => 39,  84 => 35,  82 => 33,  76 => 29,  74 => 28,  65 => 22,  52 => 12,  48 => 11,  44 => 10,  40 => 9,  36 => 8,  32 => 7,  28 => 6,  21 => 1,);
+        return array (  167 => 59,  163 => 58,  159 => 57,  153 => 54,  147 => 51,  143 => 50,  139 => 49,  135 => 48,  131 => 47,  127 => 46,  123 => 45,  119 => 44,  115 => 43,  111 => 42,  107 => 41,  104 => 40,  101 => 39,  97 => 34,  94 => 33,  89 => 126,  87 => 39,  81 => 35,  79 => 33,  73 => 29,  71 => 28,  62 => 22,  49 => 12,  45 => 11,  41 => 10,  36 => 9,  32 => 7,  28 => 6,  21 => 1,);
     }
 }

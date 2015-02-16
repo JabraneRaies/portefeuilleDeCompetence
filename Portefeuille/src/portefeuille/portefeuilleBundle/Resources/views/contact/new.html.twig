@@ -9,19 +9,25 @@
         </header>
         <div class="panel-body">
                 {{ form_start(form) }}
-            <div class="form-group">
+            <div id="form_nom" class="form-group">
                 {{ form_row(form.nom) }}        
             </div>
-            <div class="form-group">
+            <div id="form_prenom" class="form-group">
                 {{ form_row(form.prenom) }}
             </div>
-            <div class="form-group">
-                {{ form_row(form.numero) }}
+            <div id="form_num" class="form-group" >
+                {{ form_row(form.numero)  }}
+                {#<div id="erreur_num" type="inline" style="visibility: hidden;padding:5px;" class="alert alert-warning fade in">
+                    Ce n'est pas un numéro de téléphone valide
+                </div>#}
             </div>
-            <div class="form-group">
+            <div id="form_email" class="form-group">
                 {{ form_row(form.email) }}
+               {# <div id="erreur_mail" style="visibility: hidden;padding:5px;" class="alert alert-warning fade in">
+                    Ce n'est pas une adresse e-mail valide
+                </div>#}
             </div>
-            <div class="form-group">
+            <div id="form_essage" class="form-group" >
                {{ form_row(form.message) }}
             </div>
             

@@ -22,7 +22,7 @@ class __TwigTemplate_40e0862956ef70c45d4bfd5a50b27480b80faab2a61f169ead9ec19ee87
         <!-- sidebar menu start-->
         <ul class=\"sidebar-menu\" id=\"nav-accordion\">
             <li>
-                <a class=\"active\" href=\"";
+                <a class=\"dcjq-parent\" href=\"";
         // line 7
         echo $this->env->getExtension('routing')->getPath("accueil");
         echo "\">
@@ -33,37 +33,46 @@ class __TwigTemplate_40e0862956ef70c45d4bfd5a50b27480b80faab2a61f169ead9ec19ee87
                 </a>
             </li>
             <li class=\"sub-menu dcjq-parent-li\">
-                <a class=\"dcjq-parent\" href=\"javascript:;\">
+                <a class=\"dcjq-parent\" href=\"";
+        // line 15
+        echo $this->env->getExtension('routing')->getPath("cv");
+        echo "\">
                     <i class=\"fa fa-laptop\"></i>
                         <span>
                             C.V
                         </span>
-                    <span class=\"dcjq-icon\"></span>
+
                 </a>
-        <ul class=\"sub\" style=\"display: none;\"></ul>
+
             </li>
             <li class=\"sub-menu dcjq-parent-li\">
-                <a class=\"dcjq-parent\" href=\"javascript:;\">
+                <a class=\"dcjq-parent\" href=\"";
+        // line 25
+        echo $this->env->getExtension('routing')->getPath("stage");
+        echo "\">
                     <i class=\"fa fa-book\"></i>
                         <span>
                             Stage
                         </span>
-                    <span class=\"dcjq-icon\"></span>
+
                 </a>
-        <ul class=\"sub\" style=\"display: none;\"></ul>
+
             </li>
             <li class=\"sub-menu dcjq-parent-li\">
-                <a class=\"dcjq-parent\" href=\"javascript:;\">
+                <a class=\"dcjq-parent\" href=\"";
+        // line 35
+        echo $this->env->getExtension('routing')->getPath("tp");
+        echo "\">
                     <i class=\"fa fa-cogs\"></i>
                         <span>
                             TP&PPE
                         </span>
-                    <span class=\"dcjq-icon\"></span>
+
                 </a>
-        <ul class=\"sub\" style=\"display: none;\"></ul>
+
             </li>
             <li>
-                <a class=\"active\" href=\"";
+                <a class=\"dcjq-parent\" href=\"";
         // line 45
         echo $this->env->getExtension('routing')->getPath("contact_new");
         echo "\">
@@ -73,27 +82,11 @@ class __TwigTemplate_40e0862956ef70c45d4bfd5a50b27480b80faab2a61f169ead9ec19ee87
                         </span>
                 </a>
             </li>
-        <ul class=\"sub\">
-            <li><a  href=\"javascript:;\">Menu Item 1</a></li>
-            <li class=\"sub-menu\">
-                <a  href=\"boxed_page.html\">Menu Item 2</a>
-        <ul class=\"sub\">
-            <li><a  href=\"javascript:;\">Menu Item 2.1</a></li>
-            <li class=\"sub-menu\">
-                <a  href=\"javascript:;\">Menu Item 3</a>
-        <ul class=\"sub\">
-            <li><a  href=\"javascript:;\">Menu Item 3.1</a></li>
-            <li><a  href=\"javascript:;\">Menu Item 3.2</a></li>
-        </ul>
-            </li>
-        </ul>
-            </li>
-        </ul>
             
                   <!--multi level menu end-->
               </ul>
               <!-- sidebar menu end-->";
-        // line 72
+        // line 56
         echo "    </div>
 </aside>";
     }
@@ -110,6 +103,6 @@ class __TwigTemplate_40e0862956ef70c45d4bfd5a50b27480b80faab2a61f169ead9ec19ee87
 
     public function getDebugInfo()
     {
-        return array (  97 => 72,  68 => 45,  27 => 7,  19 => 1,);
+        return array (  90 => 56,  77 => 45,  64 => 35,  51 => 25,  38 => 15,  27 => 7,  19 => 1,);
     }
 }

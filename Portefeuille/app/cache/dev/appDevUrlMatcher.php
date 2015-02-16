@@ -136,6 +136,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'portefeuille\\portefeuilleBundle\\Controller\\DefaultController::indexAction',  '_route' => 'accueil',);
         }
 
+        // cv
+        if ($pathinfo === '/cv') {
+            return array (  '_controller' => 'portefeuille\\portefeuilleBundle\\Controller\\DefaultController::cvAction',  '_route' => 'cv',);
+        }
+
+        // tp
+        if ($pathinfo === '/tp') {
+            return array (  '_controller' => 'portefeuille\\portefeuilleBundle\\Controller\\DefaultController::tpAction',  '_route' => 'tp',);
+        }
+
+        // stage
+        if ($pathinfo === '/stage') {
+            return array (  '_controller' => 'portefeuille\\portefeuilleBundle\\Controller\\DefaultController::stageAction',  '_route' => 'stage',);
+        }
+
         if (0 === strpos($pathinfo, '/contact')) {
             // contact
             if (rtrim($pathinfo, '/') === '/contact') {

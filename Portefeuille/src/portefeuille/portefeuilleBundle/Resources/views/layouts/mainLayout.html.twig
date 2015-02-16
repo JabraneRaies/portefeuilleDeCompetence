@@ -5,7 +5,7 @@
         <title>Raies Jabrane</title>
             <link href="{{ asset('bundles/portefeuille/css/bootstrap-reset.css') }}" rel="stylesheet">
             <link href="{{ asset('bundles/portefeuille/css/bootstrap.min.css') }}" rel="stylesheet">
-            <link href="{{ asset('bundles/appadmin/css/font-awesome/font-awesome.min.css') }}" rel="stylesheet">
+{#            <link href="{{ asset('bundles/appadmin/css/font-awesome/font-awesome.min.css') }}" rel="stylesheet">#}
             <link href="{{ asset('bundles/portefeuille/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css') }}" rel="stylesheet">
             <link href="{{ asset('bundles/portefeuille/css/owl.carousel.css') }}" rel="stylesheet">
             <link href="{{ asset('bundles/portefeuille/css/style.css') }}" rel="stylesheet" >
@@ -57,10 +57,71 @@
     <script src="{{ asset('bundles/portefeuille/js/sparkline-chart.js') }}" ></script>
     <script src="{{ asset('bundles/portefeuille/js/easy-pie-chart.js') }}" ></script>
     <script src="{{ asset('bundles/portefeuille/js/count.js') }}" ></script>
-    <script> 
-        $('#portefeuille_portefeuillebundle_contact_submit').on( "click", function() {
-        alert('woow ta cliquer')});
-    </script>
+
+
+        <script>
+        /*
+         * RegEx E-mail
+         * controle de saisie
+         */
+        $('#portefeuille_portefeuillebundle_contact_email').focusout(function() {
+        if($( this ).val().match('^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$')){
+            if($('#erreur_mail').length>0){$('#erreur_mail').remove();
+                
+        }}
+        else{if($('#erreur_mail').length==0){
+                $('#form_email').append("<div id='erreur_mail' class='alert alert-warning fade in' >Ce n'est pas une adresse e-mail valide</div>");
+        }}
+        });
+        </script>
+        <script>
+        /*
+         * RegEx Numéro de téléphone
+         * controle de saisie
+         */
+        $('#portefeuille_portefeuillebundle_contact_numero').focusout(function() {
+        if($( this ).val().match('^0[1-9]([-. ]?[0-9]{2}){4}$')){
+            if($('#erreur_num').length>0){$('#erreur_num').remove();
+                
+        }}
+        else{if($('#erreur_num').length==0){
+                $('#form_num').append("<div id='erreur_num' class='alert alert-warning fade in'>Ce n'est pas un numéro de téléphone valide</div>");
+        }}
+        });
+        </script>
+        <script>
+        /*
+         * Controle de saisie Prénom 
+         */
+        $('#portefeuille_portefeuillebundle_contact_nom').focusout(function() {
+            if($('#erreur_nom').length>0){$('#erreur_nom').remove();
+                
+        }
+        else{if($('#erreur_nom').length==0){
+                $('#form_nom').append("<div id='erreur_nom' class='alert alert-warning fade in' >veuillez remplir ce champ</div>");
+        }}
+        });
+        
+      
+        </script>
+        
+        <script>
+        /*
+         * Controle de saisie Prénom 
+         */
+        $('#portefeuille_portefeuillebundle_contact_prenom').focusout(function() {
+            if($('#erreur_prenom').length>0){$('#erreur_prenom').remove();
+                
+        }
+        else{if($('#erreur_prenom').length==0){
+                $('#form_prenom').append("<div id='erreur_prenom' class='alert alert-warning fade in' >veuillez remplir ce champ</div>");
+        }}
+        });
+        
+      
+        </script>
+
+    
   {% endblock %}
 </html>
 {# empty Twig template #}
