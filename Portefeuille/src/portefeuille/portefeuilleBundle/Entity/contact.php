@@ -51,7 +51,7 @@ class contact
     private $email;
 
     /**
-     * @var string
+     * @var text
      *
      * @ORM\Column(name="message", type="text")
      */

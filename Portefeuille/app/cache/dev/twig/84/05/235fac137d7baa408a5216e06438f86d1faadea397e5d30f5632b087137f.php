@@ -36,7 +36,20 @@ class __TwigTemplate_8405235fac137d7baa408a5216e06438f86d1faadea397e5d30f5632b08
     public function block_body($context, array $blocks = array())
     {
         // line 3
-        echo "j'ai fai mon stage
+        echo "<div class=\"col-lg-8\">
+    <section id=\"main-content\">
+        <header class=\"panel-heading\">
+            <center><h1>Stage</h1></center>
+        </header>
+    <p>
+        
+        Vous trouverez ici la présentation des stage que j'ai fait dans l'entreprise Viseo<br>
+        Viseo est une ESN (Entreprise de Service Numérique) Française créée en 1999 et basé a Paris <br>
+        Elle emploie à peut près 1 200 employé et à un chiffre d'affaire supérieur a 110 millions d'€<br>
+        Lors de ma première année l'entreprise ce nommais Novédia et c'est faite acheter par Viséo
+    </p>
+    </section>
+</div>
 ";
     }
 

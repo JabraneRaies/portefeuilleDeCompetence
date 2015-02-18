@@ -42,7 +42,7 @@ class contactType extends AbstractType
                     'class'=>'form-control'
                     )
                 ))
-            ->add('message','text',array(
+            ->add('message','textarea',array(
                 'label'=>'Message',
                 'attr'=> array(
                     'class'=>'form-control'

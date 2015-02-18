@@ -74,7 +74,7 @@ class __TwigTemplate_f72201eed7ef8062caabf8340626c28ed6bdb3869a92b5c6989f5d6d8ff
                ";
         // line 29
         echo "            </div>
-            <div id=\"form_essage\" class=\"form-group\" >
+            <div id=\"form_message\" class=\"form-group text-lock\">
                ";
         // line 31
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "message", array()), 'row');
