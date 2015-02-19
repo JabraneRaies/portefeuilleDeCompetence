@@ -107,6 +107,7 @@ class __TwigTemplate_76232739dc05889b95794bf60f2939cd0e94f781f4192d282be7ab4a216
         </tr>
     </tbody>
 </table>
+<br>
 <p>
     17 janvier/13 mars 15 Stage développeur Symphony 2 – Viseo – IDF
 </p>
@@ -120,6 +121,7 @@ class __TwigTemplate_76232739dc05889b95794bf60f2939cd0e94f781f4192d282be7ab4a216
     Sept. 12/Août 13 Assistant pédagogique – Chez des particuliers – IDF
 </p>
 <p>
+    <br>
     <strong>Formations</strong>
 </p>
 <p>
@@ -131,7 +133,7 @@ class __TwigTemplate_76232739dc05889b95794bf60f2939cd0e94f781f4192d282be7ab4a216
 <p>
     <strong>Connaissances en informatique</strong>
 </p>
-<p>
+<p><br>
     <strong><u>Language:</u></strong>
     <strong> </strong>
     php, c#, html, sql, css, jQuery, Ajax, Symfony 2
@@ -156,7 +158,7 @@ class __TwigTemplate_76232739dc05889b95794bf60f2939cd0e94f781f4192d282be7ab4a216
     <strong><u>Systèmes d’expl. :</u></strong>
     Windows XP Pro, initiation Linux, Windows 7, Windows 8
 </p>
-<p>
+<p><br>
     <strong>Informations complémentaires</strong>
 </p>
 <p>
